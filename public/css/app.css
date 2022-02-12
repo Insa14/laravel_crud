@@ -474,17 +474,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: auto;
   margin-right: auto;
 }
-.t-mt-2 {
-  margin-top: 0.5rem;
-}
-.t-mt-3 {
-  margin-top: 0.75rem;
-}
 .t-mt-4 {
   margin-top: 1rem;
 }
 .t-mr-auto {
   margin-right: auto;
+}
+.t-mt-2 {
+  margin-top: 0.5rem;
 }
 .t-block {
   display: block;
@@ -504,25 +501,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .t-h-full {
   height: 100%;
 }
+.t-h-\[100px\] {
+  height: 100px;
+}
 .t-min-h-screen {
   min-height: 100vh;
 }
 .t-w-full {
   width: 100%;
 }
+.t-w-\[100px\] {
+  width: 100px;
+}
 .t-flex-grow {
   flex-grow: 1;
-}
-.t-auto-cols-min {
-  grid-auto-columns: -webkit-min-content;
-  grid-auto-columns: min-content;
-}
-.t-auto-cols-max {
-  grid-auto-columns: -webkit-max-content;
-  grid-auto-columns: max-content;
-}
-.t-grid-flow-col {
-  grid-auto-flow: column;
 }
 .t-grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -544,22 +536,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.t-rounded{
+.t-rounded {
   border-radius: 0.25rem;
 }
 .t-bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.t-bg-\[\#af00af\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(175 0 175 / var(--tw-bg-opacity));
+}
 .t-px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.t-pt-1 {
-  padding-top: 0.25rem;
-}
 .t-pr-2 {
   padding-right: 0.5rem;
+}
+.t-pt-1 {
+  padding-top: 0.25rem;
 }
 .t-text-lg {
   font-size: 1.125rem;
@@ -594,7 +590,6 @@ html > body {
     font-family: "GmarketSansMedium";
     text-underline-position: under;
 }
-
 .multiline-truncate-2 {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -622,20 +617,14 @@ html > body {
   }
 }
 
-@media (min-width: 768px) {
-
-  .md\:t-grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
 @media (min-width: 1024px) {
-
-  .lg\:t-grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
 
   .lg\:t-grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:t-bg-\[\#afaf00\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(175 175 0 / var(--tw-bg-opacity));
   }
 }

@@ -19,3 +19,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::resource('articles', ArticleController::class);
+
+Route::get('/abc', function () {
+    return view('abc')->with(['age' => 10]);
+});
