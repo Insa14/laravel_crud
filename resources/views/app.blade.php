@@ -8,6 +8,8 @@
     <title>유니콘 - @yield('title')</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body class="t-flex t-flex-col t-min-h-screen">
@@ -64,6 +66,8 @@
 
     <!-- 상단바의 높이만큼 -->
     <div class="t-h-10"></div>
+
+    @include('flash-message')
 
     <main class="t-flex-grow t-flex t-flex-col">
         @yield('content')
