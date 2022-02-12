@@ -522,6 +522,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .t-flex-col {
   flex-direction: column;
 }
+.t-flex-wrap {
+  flex-wrap: wrap;
+}
 .t-items-center {
   align-items: center;
 }
