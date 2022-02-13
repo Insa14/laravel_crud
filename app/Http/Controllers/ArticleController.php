@@ -63,7 +63,9 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        echo json_encode($article->toArray());
+        return view('articles.edit', [
+            'article' => $article
+        ]);
     }
 
     /**
@@ -75,7 +77,15 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        $validatedData = $request->validate([
+            'title' => 'required|max:200',
+            'body' => 'required',
+        ]);
+        $article->title = $validatedData['title'];
+        $article->body = $validatedData['body'];
+        $article->save();
+
+        return redirect()->route('articles.show', $article->id)->with('success', "{$article->id}번 게시물을 수정하였습니다.");
     }
 
     /**
