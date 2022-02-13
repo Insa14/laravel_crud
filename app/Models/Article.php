@@ -10,6 +10,10 @@ class Article extends Model
     use HasFactory;
     public function getThumbImgUrlAttribute()
     {
+        if ($this->img_1) {
+            return asset('storage/' . $this->img_1);
+        }
+        
         return "https://via.placeholder.com/500/DFDFDF/000000?text=^_^";
     }
 

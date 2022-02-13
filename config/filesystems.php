@@ -44,9 +44,9 @@ return [
 
         'admin' => [
             'driver' => 'local',
-            'root' => public_path('adm/uploads'),
+            'root' => storage_path('adm/public/adm'),
             'visibility' => 'public',
-            'url' => env('APP_URL') . '/adm/uploads',
+            'url' => env('APP_URL') . '/storage/adm',
         ],
 
         's3' => [
